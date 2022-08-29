@@ -8,7 +8,7 @@ function Home() {
 
     return (
         <div className='flex w-full gap-4 flex-row bg-bg-dark-1 min-h-screen'>
-            <div className='w-8/12 md:w-full p-4 sm:px-2'>
+            <div className='w-8/12 md:w-full p-4 sm:px-3'>
                 <Header 
                     userInput={userInput}
                     setUserInput={setUserInput}
