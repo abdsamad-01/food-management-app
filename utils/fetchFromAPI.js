@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = 'https://api.spoonacular.com/recipes/';
+const BASE_URL = 'https://api.spoonacular.com/recipes';
 
 const options = {
     method: 'GET',
