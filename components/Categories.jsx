@@ -8,7 +8,7 @@ const Categories = () => {
             {categories.map(item => (
                 <li 
                     key={item.id}
-                    className='text-lg font-dmSans w-full flex flex-nowrap font-medium text-gray-100'
+                    className='text-lg font-dmSans text-center w-full flex flex-nowrap font-medium text-gray-100'
                 > 
                     { item.name } 
                 </li>
