@@ -6,7 +6,7 @@ const Categories = () => {
             {['Hot Dishes', 'Cold Dishes', 'Soup', 'Grill', 'Appetizer', 'Desert'].map((item, idx) => (
                 <li 
                     key={idx}
-                    className='text-lg font-dmSans text-gray-100'
+                    className='text-lg font-dmSans font-medium text-gray-100'
                 > 
                     { item } 
                 </li>
