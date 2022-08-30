@@ -11,7 +11,7 @@ import { VscPaintcan } from 'react-icons/vsc';
 
 const Sidebar = () => {
     return (
-        <div className='sticky pt-8 sm:pt-0 l-0 top-0 h-screen flex flex-col justify-start sm:px-3 sm:justify-center items-center bg-bg-dark-2 w-24 '>
+        <div className='sticky pt-8 md:pt-2 sm:pt-8 left-0 top-0 min-h-screen max-h-screen flex flex-col justify-start sm:px-3  items-center bg-bg-dark-2 w-24 '>
             <div className='md:mt-10 mb-10 sm:mb-6'>
                 <BsCartFill className='h-6 w-6 text-icon-bg cursor-pointer' />
             </div>
@@ -35,7 +35,7 @@ const Sidebar = () => {
             </div>
             <div className='my-4 m sm:mb-6'>
                 <FaSignOutAlt className='h-6 w-6 text-icon-bg cursor-pointer' />
-            </div>            
+            </div>     
         </div>
     )
 }
