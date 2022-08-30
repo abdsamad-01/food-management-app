@@ -4,7 +4,7 @@ import { Header, Categories, Cart, FoodLists } from '../components';
 
 function Home() {
     const [userInput, setUserInput] =useState('');
-    const [selected, setSelected] = useState('Hot Dishes');
+    const [selectedCategory, setSelectedCategory] = useState('HotDishes');
 
     return (
         <div className='flex w-full gap-4 flex-row bg-bg-dark-1 min-h-screen'>
@@ -13,10 +13,13 @@ function Home() {
                     userInput={userInput}
                     setUserInput={setUserInput}
                 />
-                <Categories />
+                <Categories 
+                    selectedCategory={selectedCategory}
+                    setSelectedCategory={setSelectedCategory}
+                />
                 <FoodLists 
-                    selected={selected}
-                    setSelected={setSelected}
+                    selectedCategory={selectedCategory}
+                    setSelectedCategory={setSelectedCategory}
                 />
             </div>
 

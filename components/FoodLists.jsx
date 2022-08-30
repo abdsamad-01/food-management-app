@@ -5,7 +5,7 @@ import Button from './Button';
 import { BsCartFill } from 'react-icons/bs';
 
 
-const FoodLists = ({ selected }) => {
+const FoodLists = ({ selectedCategory }) => {
     const [food, setFood] = useState([]);
 
     useEffect(() => {
@@ -14,17 +14,15 @@ const FoodLists = ({ selected }) => {
             setFood(JSON.parse(check));
 
         } else {
-            fetchFromApi(`random?number=20&tag=hot-dishes`)
+            fetchFromApi(`random?number=20&tag=${selectedCategory}`)
                 .then(data => {
                     localStorage.setItem('food', JSON.stringify(data?.recipes));
 
                     setFood(data?.recipes)
                 });
-        }
+            }
 
-
-
-    }, [selected])
+    }, [selectedCategory])
 
     return (
         <div className='mt-8'>
@@ -49,7 +47,7 @@ const FoodLists = ({ selected }) => {
                             <Button name='Add to Cart'
                                 btnStyles='text-gray-100'
                             />
-                            <BsCartFill className='h-5 w-5 text-icon-bg mr-3' />
+                            <BsCartFill className='h-4 w-4 text-icon-bg mr-3' />
                         </div>
 
                     </div>
